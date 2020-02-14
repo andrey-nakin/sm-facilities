@@ -1,4 +1,4 @@
-# erm
+# sm-erm
 
 Software for electrical resistivity measurement facility.
 
