@@ -46,7 +46,7 @@ proc run {} {
 # Entry point
 ###############################################################################
 
-package require a007::utils
+package require erm::utils
 
 # \u0418\u043D\u0438\u0446\u0438\u0430\u043B\u0438\u0437\u0438\u0440\u0443\u0435\u043C \u043F\u0440\u043E\u0442\u043E\u043A\u043E\u043B\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435
 set log [measure::logger::init tester]
