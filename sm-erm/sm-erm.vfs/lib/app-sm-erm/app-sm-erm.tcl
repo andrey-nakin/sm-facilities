@@ -181,8 +181,8 @@ proc toggleTestResistance {} {
 	global w
 	set p "$w.nb.ms.r.curr"
 	set mode [measure::config::get current.method 0]
-	::measure::widget::setDisabled [expr $mode == 1] $p.r $p.lr
-	::measure::widget::setDisabled [expr $mode == 1] $p.rerr $p.lrerr
+# TODO	::measure::widget::setDisabled [expr $mode == 1] $p.r $p.lr
+# TODO	::measure::widget::setDisabled [expr $mode == 1] $p.rerr $p.lrerr
 	::measure::widget::setDisabled [expr $mode != 3] $p.cur $p.lcur
 	::measure::widget::setDisabled [expr $mode == 2] $p.curerr $p.lcurerr
 }
@@ -401,6 +401,9 @@ pack $p -fill x -padx 10 -pady 5
 set p [ttk::labelframe $w.nb.ms.l.switch -text " \u041F\u0435\u0440\u0435\u043F\u043E\u043B\u044E\u0441\u043E\u0432\u043A\u0430 " -pad 10]
 pack $p -fill x -padx 10 -pady 5
 ::measure::widget::switchControls $p switch
+# following widgets are not used in this app version
+destroy "${p}.lswitchVoltage"
+destroy "${p}.switchVoltage"
 
 grid [ttk::label $p.lstep -text "\u041A\u043E\u043B-\u0432\u043E \u0442\u043E\u0447\u0435\u043A \u043F\u0435\u0440\u0435\u0434 \u043F\u0435\u0440\u0435\u043F\u043E\u043B\u044E\u0441\u043E\u0432\u043A\u043E\u0439:"] -row 3 -column 0 -sticky w
 grid [ttk::spinbox $p.step -width 10 -textvariable settings(switch.step) -from 1 -to 100 -increment 1 -validate key -validatecommand {string is integer %P}] -row 3 -column 1 -sticky e
@@ -411,6 +414,15 @@ grid [ttk::spinbox $p.step -width 10 -textvariable settings(switch.step) -from 1
 set p [ttk::labelframe $w.nb.ms.r.curr -text " \u041C\u0435\u0442\u043E\u0434 \u0438\u0437\u043C\u0435\u0440\u0435\u043D\u0438\u044F \u0441\u043E\u043F\u0440\u043E\u0442\u0438\u0432\u043B\u0435\u043D\u0438\u044F " -pad 10]
 pack $p -fill x -padx 10 -pady 5
 measure::widget::resistanceMethodControls $p current
+# following widgets are not used in this app version
+destroy "${p}.lvolt"
+destroy "${p}.volt"
+destroy "${p}.lr"
+destroy "${p}.r"
+destroy "${p}.lrerr"
+destroy "${p}.rerr"
+destroy "${p}.lman"
+destroy "${p}.man"
 
 grid columnconfigure $w.nb.m {0 1} -pad 5
 grid rowconfigure $w.nb.m {0 1} -pad 5
