@@ -1,4 +1,8 @@
 # erm
 
-Electrical Resistivity Measurement - Измерение элекросопротивления
+Software for electrical resistivity measurement facility.
+
+***
+
+Программная часть установки по измерению электросопротивления.
 

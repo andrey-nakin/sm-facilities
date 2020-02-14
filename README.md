@@ -2,7 +2,7 @@
 
 Software for scientific measurement facilities.
 
-It is Tcl/TK-based and uses [`tcl-measure`](https://github.com/andrey-nakin/tcl-measure) library.
+It is Tcl/Tk-based and uses [`tcl-measure`](https://github.com/andrey-nakin/tcl-measure) library.
 
 ***
 
