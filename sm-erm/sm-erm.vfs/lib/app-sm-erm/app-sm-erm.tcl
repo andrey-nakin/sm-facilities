@@ -5,7 +5,7 @@
 # Main module
 ###############################################################################
 
-package provide app-sm-erm 0.1.0
+package provide app-sm-erm 0.1.2
 
 package require Tcl 8.5
 package require Tk 8.5

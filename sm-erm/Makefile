@@ -1,4 +1,4 @@
-APP_VERSION=2.2.0
+APP_VERSION=0.1.2
 LINUX_RUNTIME=./tclkit-8.6.3-rhel5-ix86
 WINDOWS_RUNTIME=tclkit-8.5.8-win32.upx.exe
 LINUX_TCLKITSH=./tclkitsh-8.5.9-linux-ix86
