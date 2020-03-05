@@ -85,7 +85,7 @@ proc setup {} {
     set vSwitches { 0 }
     set cSwitches { 0 }
     if { 0 != [measure::config::get switch.current 0]} {
-    	lappend connectors 1
+    	lappend connectors 1000
         lappend vSwitches { 0 } 
         lappend cSwitches { 1 } 
     }
@@ -283,13 +283,8 @@ proc setConnectors { conns } {
         hardware::owen::mvu8::modbus::setChannels $settings(switch.serialAddr) $settings(switch.rs485Addr) 4 {1000}
     	#after 500
     
-	if { $conns == 0 } {
-		set v 0
-	} else {
-		set v 1000
-	}
-        hardware::owen::mvu8::modbus::setChannels $settings(switch.serialAddr) $settings(switch.rs485Addr) 0 $v
-        hardware::owen::mvu8::modbus::setChannels $settings(switch.serialAddr) $settings(switch.rs485Addr) 2 $v
+        hardware::owen::mvu8::modbus::setChannels $settings(switch.serialAddr) $settings(switch.rs485Addr) 0 $conns
+        hardware::owen::mvu8::modbus::setChannels $settings(switch.serialAddr) $settings(switch.rs485Addr) 2 $conns
     	#after 500
 
         hardware::owen::mvu8::modbus::setChannels $settings(switch.serialAddr) $settings(switch.rs485Addr) 4 {0}
